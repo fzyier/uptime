@@ -1,7 +1,12 @@
+pub enum Transport {
+    TCP,
+    UDP,
+}
+
 pub struct Target {
     host: String,
     port: i16,
-    transport: String,
+    transport: Transport,
     request: String,
     successful_response: String,
 }
@@ -10,7 +15,7 @@ impl Target {
     pub fn new(
         host: &str,
         port: i16,
-        transport: String,
+        transport: Transport,
         request: &str,
         successful_response: &str,
     ) -> Self {
