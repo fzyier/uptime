@@ -1,3 +1,7 @@
+pub trait Probe {
+    fn probe(&self) -> Result<f64, String>;
+}
+
 pub enum Transport {
     TCP,
     UDP,
